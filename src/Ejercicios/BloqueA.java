@@ -4,31 +4,18 @@ import java.util.Scanner;
 
 public class BloqueA {
 
-
 	/*
 	 * 1.1 Método que devuelva un número aleatorio entre dos pasados por argumentos
 	 * del método.
 	 */
-	public int numeroAleatorio(int numeroIntroducido1,int numeroIntroducido2) {
+	public static  int numeroAleatorio(int numeroIntroducido1,int numeroIntroducido2) {
 
 		/* Creamos las variables */
 		int numeroAleatorio;
 
-		/* Creamos un bucle para facilitar el método */
-		for (int i = 0; i < 1; i++) {
-			/*
-			 * Colocamos un random en numeroAleatorio que elija dos números y posteriormente
-			 * creamos un switch.
-			 */
-			numeroAleatorio = (int) (Math.random() * (3 - 1) + 1);
-			switch (numeroAleatorio) {
-			case 1:
-				numeroAleatorio = numeroIntroducido1;
-				break;
-			case 2:
-				numeroAleatorio = numeroIntroducido2;
-				break;
-			}
+		/*Hacemos el mathRandom para que de uno de esos dos valores*/
+			numeroAleatorio = (int) (Math.random() * (numeroIntroducido1 - numeroIntroducido2) + numeroIntroducido2);
+			
 			return numeroAleatorio;
 
 		}
@@ -77,8 +64,12 @@ public class BloqueA {
 		public String toString() {
 			return "Persona [nombre=" + nombre + ", edad=" + edad + "]";
 		}
-
 	}
+
+
 	
-	public static void
+	public static void mayor_o_menor() {
+		
+		
+	}
 }
